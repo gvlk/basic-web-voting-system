@@ -1,14 +1,13 @@
 # Guilherme Azambuja
 # https://github.com/gvlk/basic-web-voting-system
 
-import csv
-from csv import writer
+from csv import reader, writer
 
 from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
-csvfilename = "votes.csv"
+CSV_FILENAME = "votes.csv"
 
 
 @app.route("/")
@@ -19,9 +18,9 @@ def main() -> str:
 @app.route("/vote", methods=['POST'])
 def vote() -> str:
     data = list()
-    with open(csvfilename, "r") as file:
-        reader = csv.reader(file)
-        for i, row in enumerate(reader):
+    with open(CSV_FILENAME, "r") as file:
+        csv_reader = reader(file)
+        for i, row in enumerate(csv_reader):
             if i == 0:
                 data.append(row)
                 continue
