@@ -1,11 +1,12 @@
 body {
     margin: 0;
-    padding: 0;
-    width: 100vw;
-    height: 100%;
-    max-height: 100vh;
-    background-color: #b2b2ff;
-    color: #faf7c2;
+    padding: 100px;
+    width: calc(100vw - 200px);
+    height: calc(100vh - 200px);
+    justify-content: center;
+    align-content: center;
+    background-color: antiquewhite;
+    color: darkmagenta;
     font: 10pt "DejaVu Sans Mono";
 }
 
@@ -14,12 +15,17 @@ body {
 }
 
 #form_header h1 {
+    position: absolute;
+    left: 50vw;
+    top: 0;
+    transform: translate(-50%, 0);
     margin: 0;
+    font-size: 4em;
 }
 
 #images_display {
-    margin: 0 auto;
-    border: 5px solid #ccc;
+    width: 100%;
+    height: 100%;
 }
 
 #main_form {
@@ -29,9 +35,13 @@ body {
 }
 
 .option {
-    margin: 50px;
+    margin: 5px 40px;
     text-align: center;
     font-size: 1.5em;
+}
+
+.option p {
+    margin-top: 3px;
 }
 
 [type=radio] + img {
@@ -47,13 +57,68 @@ body {
 }
 
 [type=radio]:checked + img {
-    outline: 3px solid blue;
+    border-radius: 40px;
+    animation: glowing 2s infinite;
 }
 
 #submit_button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
     position: absolute;
     left: 50vw;
     top: calc(100vh - 100px);
     transform: translate(-50%, -50%);
     flex: 0 0 100%;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:active {
+    background-color: #3e8e41;
+}
+
+@keyframes glowing {
+    0% {
+        box-shadow: 0 0 5px rgba(0, 255, 85, 0.66);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(0, 255, 85, 0.66), 0 0 30px rgba(0, 255, 85, 0.66);
+    }
+    100% {
+        box-shadow: 0 0 5px rgba(0, 255, 85, 0.66);
+    }
+}
+
+#results {
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    width: 80%;
+}
+
+#results table th, table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+#results table th {
+    background-color: #f2f2f2;
+}
+
+#results tr:hover {
+    background-color: #ebebeb;
 }

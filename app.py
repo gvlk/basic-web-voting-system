@@ -1,3 +1,6 @@
+# Guilherme Azambuja
+# https://github.com/gvlk/basic-web-voting-system
+
 import csv
 from csv import writer
 
