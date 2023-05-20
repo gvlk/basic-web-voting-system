@@ -1,51 +1,53 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <link href="/static/style.css" rel="stylesheet">
-  <title>Sistema de Votação</title>
+    <meta charset="UTF-8">
+    <link href="/static/css/style.css" rel="stylesheet" type="text/css">
+    <title>Sistema de Votação</title>
 </head>
 <body>
-  <h1>Qual é o mais maneiro?</h1>
-  <div id="images_display">
-    <form action="#" method="post">
-      <div class="option">
-        <input type="radio" name="option" value="option1" id="option1">
-        <label for="option1">
-          <img alt="Shockwave (Age of Extintion)" src="/images/shockwave_aoe.webp">
-          <p>Shockwave (Age of Extintion)</p>
-        </label>
-      </div>
-      <div class="option">
-        <input type="radio" name="option" value="option2" id="option2">
-        <label for="option2">
-          <img alt="Bumblebee (Age of Extintion)" src="/images/bumblebee_aoe.webp">
-          <p>Bumblebee (Age of Extintion)</p>
-        </label>
-      </div>
-      <div class="option">
-        <input type="radio" name="option" value="option3" id="option3">
-        <label for="option3">
-          <img alt="Sentinel Prime (Dark Side Moon)" src="/images/sentinel_prime_dotm.webp">
-          <p>Sentinel Prime (Dark Side Moon)</p>
-        </label>
-      </div>
-      <div class="option">
-        <input type="radio" name="option" value="option4" id="option4">
-        <label for="option4">
-          <img alt="Optimus Prime (The Last Knight)" src="/images/optimus_prime_tlk.webp">
-          <p>Optimus Prime (The Last Knight)</p>
-        </label>
-      </div>
-      <div class="option">
-        <input type="radio" name="option" value="option5" id="option5">
-        <label for="option5">
-          <img alt="Drift (Age of Extintion)" src="/images/drift_aoe.png">
-          <p>Drift (Age of Extintion)</p>
-        </label>
-      </div>
-      <button type="submit">Confirmar</button>
+<section id="form_header">
+    <h1>Qual é o mais maneiro?</h1>
+</section>
+<section id="images_display">
+    <form id="main_form" action="/vote" method="POST">
+        <div class="option">
+            <label for="option1">
+                <input type="radio" name="option" value="option1" id="option1">
+                <img alt="Shockwave (Age of Extintion)" src="/static/images/shockwave_aoe.webp">
+                <p>Shockwave (Age of Extintion)</p>
+            </label>
+        </div>
+        <div class="option">
+            <label for="option2">
+                <input type="radio" name="option" value="option2" id="option2">
+                <img alt="Bumblebee (Age of Extintion)" src="/static/images/bumblebee_aoe.webp">
+                <p>Bumblebee (Age of Extintion)</p>
+            </label>
+        </div>
+        <div class="option">
+            <label for="option3">
+                <input type="radio" name="option" value="option3" id="option3">
+                <img alt="Sentinel Prime (Dark Side Moon)" src="/static/images/sentinel_prime_dotm.webp">
+                <p>Sentinel Prime (Dark Side Moon)</p>
+            </label>
+        </div>
+        <div class="option">
+            <label for="option4">
+                <input type="radio" name="option" value="option4" id="option4">
+                <img alt="Optimus Prime (The Last Knight)" src="/static/images/optimus_prime_tlk.webp">
+                <p>Optimus Prime (The Last Knight)</p>
+            </label>
+        </div>
+        <div class="option">
+            <label for="option5">
+                <input type="radio" name="option" value="option5" id="option5">
+                <img alt="Drift (Age of Extintion)" src="/static/images/drift_aoe.png">
+                <p>Drift (Age of Extintion)</p>
+            </label>
+        </div>
+        <button id="submit_button" type="submit">Confirmar</button>
     </form>
-  </div>
+</section>
 </body>
 </html>
