@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" type="text/css">
+    <title>Sistema de Votação</title>
+</head>
+<body>
+<section id="user_cfg_header">
+    <h1>Bem vindo! Personalize seu perfil</h1>
+</section>
+<section>
+    <form action="/save_user_cfg" method="POST" id="user_cfg">
+        <label>
+            <input type="text" name="name" placeholder="Nome" value="{{ username }}">
+        </label>
+        <div id="profile_pic_choice">
+            <label for="monster1">
+                <input type="radio" name="profile_pic" value="monster1" id="monster1">
+                <img src="../static/images/monster1.png" class="profile_pic" alt="monster1"/>
+            </label>
+            <label for="monster2">
+                <input type="radio" name="profile_pic" value="monster2" id="monster2">
+                <img src="../static/images/monster2.png" class="profile_pic" alt="monster2">
+            </label>
+            <label for="monster3">
+                <input type="radio" name="profile_pic" value="monster3" id="monster3">
+                <img src="../static/images/monster3.png" class="profile_pic" alt="monster3">
+            </label>
+        </div>
+        <label for="light" class="color_mode"> Claro
+            <input type="radio" name="color_mode" id="light" value="antiquewhite">
+        </label>
+        <label for="dark" class="color_mode"> Escuro
+            <input type="radio" name="color_mode" id="dark" value="darkslategray">
+        </label>
+
+        <input type="submit" value="Salvar">
+    </form>
+</section>
+</body>
+</html>

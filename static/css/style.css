@@ -10,18 +10,62 @@ body {
     font: 10pt "DejaVu Sans Mono";
 }
 
+#login {
+    text-align: center;
+}
+
+#user_info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#user_info p, a {
+    margin: 10px;
+}
+
+#user_cfg_header {
+    width: max-content;
+    margin: auto;
+}
+
+#user_cfg {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    align-items: center;
+    margin: auto;
+}
+
+#user_cfg label {
+    margin: 15px;
+}
+
+#profile_pic_choice {
+    display: flex;
+}
+
+.color_mode [type=radio] {
+    position: relative;
+    opacity: 100;
+    width: 10px;
+    height: 10px;
+}
+
+
+.profile_pic {
+    height: 65px;
+    border-radius: 100%;
+}
+
 #form_header {
     text-align: center;
 }
 
 #form_header h1 {
-    position: absolute;
-    left: 50vw;
-    top: 0;
-    transform: translate(-50%, 0);
-    margin: 0;
     font-size: 4em;
 }
+
 
 #images_display {
     width: 100%;
@@ -40,14 +84,18 @@ body {
     font-size: 1.5em;
 }
 
+.option img {
+    height: 250px;
+}
+
 .option p {
     margin-top: 3px;
 }
 
 [type=radio] + img {
-    height: 300px;
     cursor: pointer;
 }
+
 
 [type=radio] {
     position: absolute;
